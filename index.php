@@ -28,10 +28,10 @@
                             <td><label for="bandaraAsal">Bandara Asal </label></td>
                             <td>
                                 <select class="form-control" name="bandaraAsal">
-                                    <option value="Soekarno-Hatta">Soekarno-Hatta (CGK)</option>
-                                    <option value="Husein Sastranegara">Husein Sastranegara (BDO)</option>
-                                    <option value="Abdul Rachman Saleh">Abdul Rachman Saleh (MLG)</option>
-                                    <option value="Juanda">Juanda (SUB)</option>
+                                    <option value="Soekarno-Hatta (CGK)">Soekarno-Hatta (CGK)</option>
+                                    <option value="Husein Sastranegara (BDO)">Husein Sastranegara (BDO)</option>
+                                    <option value="Abdul Rachman Saleh (MLG)">Abdul Rachman Saleh (MLG)</option>
+                                    <option value="Juanda (SUB)">Juanda (SUB)</option>
                                 </select>
                             </td>
                         </tr>
@@ -40,10 +40,10 @@
                             <td><label for="bandaraTujuan">Bandara Tujuan </label></td>
                             <td>
                                 <select class="form-control" required name="bandaraTujuan">
-                                    <option value="Sultan Iskandarmuda">Sultan Iskandarmuda (BTJ)</option>
-                                    <option value="Ngurah Rai">Ngurah Rai (DPS)</option>
-                                    <option value="Hasanuddin">Hasanuddin (UPG)</option>
-                                    <option value="Inanwatan">Inanwatan (INX)</option>
+                                    <option value="Sultan Iskandarmuda (BTJ)">Sultan Iskandarmuda (BTJ)</option>
+                                    <option value="Ngurah Rai (DPS)">Ngurah Rai (DPS)</option>
+                                    <option value="Hasanuddin (UPG)">Hasanuddin (UPG)</option>
+                                    <option value="Inanwatan (INX)">Inanwatan (INX)</option>
                                 </select>
                             </td>
                         </tr>
@@ -62,9 +62,9 @@
                 </table>
         </div>
         <?php
-            $bandaraAsal = ["Soekarno-Hatta", "Husein Sastranegara", "Abdul Rachman Saleh", "Juanda"];
+            $bandaraAsal = ["Soekarno-Hatta (CGK)", "Husein Sastranegara (BDO)", "Abdul Rachman Saleh (MLG)", "Juanda (SUB)"];
             sort($bandaraAsal); 
-            $bandaraTujuan = ["Ngurah Rai", "Hasanuddin", "Inanwatan", "Sultan Iskandarmuda"];
+            $bandaraTujuan = ["Ngurah Rai (DPS)", "Hasanuddin (UPG)", "Inanwatan (INX)", "Sultan Iskandarmuda (BTJ)"];
             sort($bandaraTujuan);
 
 
@@ -92,23 +92,23 @@
                 $bandaraTujuan = $_POST['bandaraTujuan'];
                 $hargaTiket = $_POST['hargaTiket'];
 
-                if ($bandaraAsal = "Soekarno-Hatta") {
-                    if ($bandaraTujuan == "Ngurah Rai") {
+                if ($bandaraAsal = "Soekarno-Hatta (CGK)") {
+                    if ($bandaraTujuan == "Ngurah Rai (DPS)") {
                         $totalPajak = $cgk + $dps;
                         $totalHarga = $hargaTiket + $totalPajak;
 
                         $dataBaru = [$maskapai, $bandaraAsal, $bandaraTujuan, $hargaTiket, $totalPajak, $totalHarga];
-                    } else if ($bandaraTujuan == "Hasasnuddin") {
+                    } else if ($bandaraTujuan == "Hasanuddin (UPG)") {
                         $totalPajak = $cgk + $upg;
                         $totalHarga = $hargaTiket + $totalPajak;
 
                         $dataBaru = [$maskapai, $bandaraAsal, $bandaraTujuan, $hargaTiket, $totalPajak, $totalHarga];
-                    } else if ($bandaraTujuan == "Inanwatan") {
+                    } else if ($bandaraTujuan == "Inanwatan (INX)") {
                         $totalPajak = $cgk + $inx;
                         $totalHarga = $hargaTiket + $totalPajak;
 
                         $dataBaru = [$maskapai, $bandaraAsal, $bandaraTujuan, $hargaTiket, $totalPajak, $totalHarga];
-                    } else if ($bandaraTujuan == "Sultan Iskandarmuda") {
+                    } else if ($bandaraTujuan == "Sultan Iskandarmuda (BTJ)") {
                         $totalPajak = $cgk + $btj;
                         $totalHarga = $hargaTiket + $totalPajak;
 
@@ -116,23 +116,23 @@
                     }
                 }
 
-                if ($bandaraAsal = "Husein Sastranegara") {
-                    if ($bandaraTujuan == "Ngurah Rai") {
+                if ($bandaraAsal = "Husein Sastranegara (BDO)") {
+                    if ($bandaraTujuan == "Ngurah Rai (DPS)") {
                         $totalPajak = $bdo + $dps;
                         $totalHarga = $hargaTiket + $totalPajak;
 
                         $dataBaru = [$maskapai, $bandaraAsal, $bandaraTujuan, $hargaTiket, $totalPajak, $totalHarga];
-                    } else if ($bandaraTujuan == "Hasasnuddin") {
+                    } else if ($bandaraTujuan == "Hasanuddin (UPG)") {
                         $totalPajak = $bdo + $upg;
                         $totalHarga = $hargaTiket + $totalPajak;
 
                         $dataBaru = [$maskapai, $bandaraAsal, $bandaraTujuan, $hargaTiket, $totalPajak, $totalHarga];
-                    } else if ($bandaraTujuan == "Inanwatan") {
+                    } else if ($bandaraTujuan == "Inanwatan (INX)") {
                         $totalPajak = $bdo + $inx;
                         $totalHarga = $hargaTiket + $totalPajak;
 
                         $dataBaru = [$maskapai, $bandaraAsal, $bandaraTujuan, $hargaTiket, $totalPajak, $totalHarga];
-                    } else if ($bandaraTujuan == "Sultan Iskandarmuda") {
+                    } else if ($bandaraTujuan == "Sultan Iskandarmuda (BTJ)") {
                         $totalPajak = $bdo + $btj;
                         $totalHarga = $hargaTiket + $totalPajak;
 
@@ -140,24 +140,48 @@
                     }
                 }
 
-                if ($bandaraAsal = "Abdul Rachman Saleh") {
-                    if ($bandaraTujuan == "Ngurah Rai") {
+                if ($bandaraAsal = "Abdul Rachman Saleh (MLG)") {
+                    if ($bandaraTujuan == "Ngurah Rai (DPS)") {
                         $totalPajak = $mlg + $dps;
                         $totalHarga = $hargaTiket + $totalPajak;
 
                         $dataBaru = [$maskapai, $bandaraAsal, $bandaraTujuan, $hargaTiket, $totalPajak, $totalHarga];
-                    } else if ($bandaraTujuan == "Hasasnuddin") {
+                    } else if ($bandaraTujuan == "Hasanuddin (UPG)") {
                         $totalPajak = $mlg + $upg;
                         $totalHarga = $hargaTiket + $totalPajak;
 
                         $dataBaru = [$maskapai, $bandaraAsal, $bandaraTujuan, $hargaTiket, $totalPajak, $totalHarga];
-                    } else if ($bandaraTujuan == "Inanwatan") {
+                    } else if ($bandaraTujuan == "Inanwatan (INX)") {
                         $totalPajak = $mlg + $inx;
                         $totalHarga = $hargaTiket + $totalPajak;
 
                         $dataBaru = [$maskapai, $bandaraAsal, $bandaraTujuan, $hargaTiket, $totalPajak, $totalHarga];
-                    } else if ($bandaraTujuan == "Sultan Iskandarmuda") {
+                    } else if ($bandaraTujuan == "Sultan Iskandarmuda (BTJ)") {
                         $totalPajak = $mlg + $btj;
+                        $totalHarga = $hargaTiket + $totalPajak;
+
+                        $dataBaru = [$maskapai, $bandaraAsal, $bandaraTujuan, $hargaTiket, $totalPajak, $totalHarga];
+                    }
+                }
+
+                if ($bandaraAsal = "Juanda (SUB)") {
+                    if ($bandaraTujuan == "Ngurah Rai (DPS)") {
+                        $totalPajak = $sub + $dps;
+                        $totalHarga = $hargaTiket + $totalPajak;
+
+                        $dataBaru = [$maskapai, $bandaraAsal, $bandaraTujuan, $hargaTiket, $totalPajak, $totalHarga];
+                    } else if ($bandaraTujuan == "Hasanuddin (UPG)") {
+                        $totalPajak = $sub + $upg;
+                        $totalHarga = $hargaTiket + $totalPajak;
+
+                        $dataBaru = [$maskapai, $bandaraAsal, $bandaraTujuan, $hargaTiket, $totalPajak, $totalHarga];
+                    } else if ($bandaraTujuan == "Inanwatan (INX)") {
+                        $totalPajak = $sub + $inx;
+                        $totalHarga = $hargaTiket + $totalPajak;
+
+                        $dataBaru = [$maskapai, $bandaraAsal, $bandaraTujuan, $hargaTiket, $totalPajak, $totalHarga];
+                    } else if ($bandaraTujuan == "Sultan Iskandarmuda (BTJ)") {
+                        $totalPajak = $sub + $btj;
                         $totalHarga = $hargaTiket + $totalPajak;
 
                         $dataBaru = [$maskapai, $bandaraAsal, $bandaraTujuan, $hargaTiket, $totalPajak, $totalHarga];
