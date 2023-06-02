@@ -30,7 +30,7 @@ untuk mengelola rute penerbangan dari sebuah maskapai penerbangan. Aplikasi ini 
 - Form siap digunakan
 
 ## Preview Project
-![Preview Project](https://github.com/rezamufaris/rute-penerbangan/blob/0378a7a3ab77770f81b69d658ac1fc6cb9b47d84/css/preview.jpeg?raw=true "Title")
+![Preview Project](https://github.com/bta-tq/Bandara-Pajak-Camp/blob/master/css/Preview.png "Title")
 
 ## Kontribusi
 Form Pendaftaran Rute Penerbangan ini dibuat dengan tujuan untuk belajar dan berlatih mengembangkan aplikasi berbasis web dengan PHP. Oleh karena itu, kami sangat terbuka untuk menerima kontribusi dari teman-teman developer yang ingin berpartisipasi dalam pengembangan aplikasi ini.
