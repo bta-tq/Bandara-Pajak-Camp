@@ -92,7 +92,7 @@
                 $bandaraTujuan = $_POST['bandaraTujuan'];
                 $hargaTiket = $_POST['hargaTiket'];
 
-                if ($bandaraAsal = "Soekarno-Hatta (CGK)") {
+                if ($bandaraAsal == "Soekarno-Hatta (CGK)") {
                     if ($bandaraTujuan == "Ngurah Rai (DPS)") {
                         $totalPajak = $cgk + $dps;
                         $totalHarga = $hargaTiket + $totalPajak;
@@ -116,7 +116,7 @@
                     }
                 }
 
-                if ($bandaraAsal = "Husein Sastranegara (BDO)") {
+                if ($bandaraAsal == "Husein Sastranegara (BDO)") {
                     if ($bandaraTujuan == "Ngurah Rai (DPS)") {
                         $totalPajak = $bdo + $dps;
                         $totalHarga = $hargaTiket + $totalPajak;
@@ -140,7 +140,7 @@
                     }
                 }
 
-                if ($bandaraAsal = "Abdul Rachman Saleh (MLG)") {
+                if ($bandaraAsal == "Abdul Rachman Saleh (MLG)") {
                     if ($bandaraTujuan == "Ngurah Rai (DPS)") {
                         $totalPajak = $mlg + $dps;
                         $totalHarga = $hargaTiket + $totalPajak;
@@ -164,7 +164,7 @@
                     }
                 }
 
-                if ($bandaraAsal = "Juanda (SUB)") {
+                if ($bandaraAsal == "Juanda (SUB)") {
                     if ($bandaraTujuan == "Ngurah Rai (DPS)") {
                         $totalPajak = $sub + $dps;
                         $totalHarga = $hargaTiket + $totalPajak;
