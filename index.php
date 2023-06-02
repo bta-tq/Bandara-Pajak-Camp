@@ -63,18 +63,17 @@
         </div>
         <?php
             $bandaraAsal = ["Soekarno-Hatta", "Husein Sastranegara", "Abdul Rachman Saleh", "Juanda"];
-            sort($bandaraAsal); // berfungsi untuk mengurutkan array dari yang terkecil ke terbesar
-            // resort($listAgama) : mengurutkan array dari yang terbesar ke terkecil
+            sort($bandaraAsal); 
             $bandaraTujuan = ["Ngurah Rai", "Hasanuddin", "Inanwatan", "Sultan Iskandarmuda"];
             sort($bandaraTujuan);
 
 
-            $fileJson = 'data/data.json'; //file json untuk menampung/menyimpan data
-            $dataPenerbangan = array(); // array yang berfungsi untuk menyimpan data sementara
+            $fileJson = 'data/data.json';
+            $dataPenerbangan = array();
 
             //membaca file Json
             $dataJson = file_get_contents($fileJson);
-            $dataPenerbangan = json_decode($dataJson, true); // mengubah data json menjadi array
+            $dataPenerbangan = json_decode($dataJson, true);
 
             // Detail Pajak
             $cgk = 50000;
@@ -168,10 +167,9 @@
 
                 // Section membuat data array baru
                 // $dataBaru = [$maskapai, $bandaraAsal, $bandaraTujuan, $hargaTiket,];
-
-                array_push($dataPenerbangan, $dataBaru); //memasukkann object data baru ke array dataPesawat
-                $dataToJson = json_encode($dataPenerbangan, JSON_PRETTY_PRINT); // mengubah array dataPesawat ke dalam json
-                file_put_contents("detail_penerbangan.json", $dataToJson); //menulis ke dalam file detail_penerbangan.json
+                array_push($dataPenerbangan, $dataBaru);
+                $dataToJson = json_encode($dataPenerbangan, JSON_PRETTY_PRINT);
+                file_put_contents("data/data.json", $dataToJson);
 
             }
 
@@ -193,16 +191,9 @@
             </thead>
             <tbody>
                 <?php
-                    //	Perulangan untuk menampilkan data Penerbangan.
-                    //	Variabel $i adalah index data siswa pada array $dataPenerbangan.
+                    
                     for ($i=0; $i < count($dataPenerbangan); $i++){
-                            
-                        //	Memindahkan data dari dalam array $dataPenerbangan ke variabel baru.
-                        //	$maskapai adalah data nama maskapai.
-                        //	$asalPenerbangan adalah data asal penerbangan maskapai.
-                        //	$tujuanPenerbangan adalah data tujuan penerbangan maskapai.
-                        //	$hargaTiket adalah data berisi harga tiket dalam bentuk array berisikan harga tiket masing-masing maskapai.
-                        //  $pajak adalah data berisi pajak dari masing masing maskapai.
+                                         
                         $maskapai = $dataPenerbangan[$i][0];
                         $bandaraAsal = $dataPenerbangan[$i][1];
                         $bandaraTujuan = $dataPenerbangan[$i][2];
@@ -211,7 +202,6 @@
                         $totalHarga = $dataPenerbangan [$i][5];
 
 
-                        //	Baris untuk menampilkan data penerbangan.
                         echo "<tr>
                             <td>".$maskapai."</td><!--Data nama maskapai-->
                             <td>".$bandaraAsal."</td><!--Data bandara asal penerbangan-->
